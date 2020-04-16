@@ -52,7 +52,7 @@ finalData$code <- activities[finalData$code, 2]
 
 # Step 4
 ## Appropriately label the data set with descriptive variable names.
-names(finalData)[2] = "activity"
+names(finalData)[2] <- "activity"
 names(finalData)<-gsub("Acc", "Accelerometer", names(finalData))
 names(finalData)<-gsub("Gyro", "Gyroscope", names(finalData))
 names(finalData)<-gsub("BodyBody", "Body", names(finalData))
@@ -76,5 +76,5 @@ write.table(finalOutput, "finalOutput.txt", row.name=FALSE)
 
 
 ## checking the new dataset by reading it into R
-temp <- read.table("finalOutput.txt", header = T)
+temp <- read.table("tidyData.txt", header = T)
 View(temp)
