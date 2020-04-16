@@ -42,13 +42,13 @@ In the `finalData`, the entries of the `code` variable are replaced with their d
 In the `finalData`, the variables are name descriptively.
 - `code` is renamed `activity`
 
-Using *gsub()* function, adding descriptive words to variable names.
+Using *gsub()* function, adding descriptive words to variable names to make them more readable.
+- All variable names starting with `t` replaced with `Time` 
+- All variables names starting with `f` replaced with `Frequency`
 - `Acc` in variable names replaced with `Accelerometer`
 - `Gyro` in variable names replaced with `Gyroscope`
 - `BodyBody` in variable names replaced with `Body` 
 - `Mag` in variable names replaced with `Magnitude` 
-- All variable names starting with `t` replaced with `Time` 
-- All variables names starting with `f` replaced with `Frequency`
 
 ## Step 5
 `finalOutput.txt` is created taking the means of each variable for each activity and each subject, after groupped by subject and activity. It is written into `finalOutput.txt` dataset using *write.table()*. This dataset is read back into using using *read.table()* function into a `temp` data frame which is viewed using `View(temp)`.
