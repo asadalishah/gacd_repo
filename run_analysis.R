@@ -76,5 +76,5 @@ write.table(finalOutput, "finalOutput.txt", row.name=FALSE)
 
 
 ## checking the new dataset by reading it into R
-temp <- read.table("tidyData.txt", header = T)
+temp <- read.table("tidy_data.txt", header = T)
 View(temp)

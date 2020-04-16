@@ -15,15 +15,14 @@ The `run_analysis.R` script follows 5 steps described in the *Instructions* sect
 1.1. Data is downloaded into a folder called UCI HAR Dataset.
 1.2. Folder is unzipped and files are extracted into the same folder.
 1.3. Different files are read and assigned into different data frames.
-- `features` <- `features.txt` : 561 rows, 2 columns. Each row     corresponds to a variable in the main datasets.
-- `activities` <- `activity_labels.txt` : 6 rows, 2 columns. Each row corresponds to one activity: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING and LAYING.
-- `subject_test` <- `test/subject_test.txt` : 2947 rows, 1 column contains test data of 9/30 volunteer test subjects being observed. Available the test folder.
-- `x_test` <- `test/X_test.txt` : 2947 rows, 561 columns. Contains recorded features test data. Available the test folder.
-- `y_test` <- `test/y_test.txt` : 2947 rows, 1 columns. Contains test data of activities’code labels. Available the test folder.
-- `subject_train` <- `test/subject_train.txt` : 7352 rows, 1 column. Contains train data of 21/30 volunteer subjects being observed. Available in the train folder.
--`x_train` <- `test/X_train.txt` : 7352 rows, 561 columns. Contains recorded features train data. Available in the train folder.
-- `y_train` <- `test/y_train.txt` : 7352 rows, 1 columns
-contains train data of activities’code labels. Available in the train folder.
+- `features` <- `features.txt`. Each row     corresponds to a variable in the main datasets.
+- `activities` <- `activity_labels.txt`. Each row corresponds to one activity: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING and LAYING.
+- `subject_test` <- `test/subject_test.txt` contains test data of 9/30 volunteer test subjects being observed. Available the test folder.
+- `x_test` <- `test/X_test.txt` contains recorded features test data. Available the test folder.
+- `y_test` <- `test/y_test.txt` contains test data of activities’code labels. Available the test folder.
+- `subject_train` <- `test/subject_train.txt` contains train data of 21/30 volunteer subjects being observed. Available in the train folder.
+-`x_train` <- `test/X_train.txt` contains recorded features train data. Available in the train folder.
+- `y_train` <- `test/y_train.txt` contains train data of activities’code labels. Available in the train folder.
 
 1.4. Merge the test and training data into one data frame.
 - `x-test` and `x-train` data sets are merged using *rbind()* function in a new dataframe `x`
