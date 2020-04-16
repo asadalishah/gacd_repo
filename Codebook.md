@@ -17,10 +17,10 @@ The `run_analysis.R` script follows 5 steps described in the *Instructions* sect
 1.3. Different files are read and assigned into different data frames.
 - `features` <- `features.txt`. Each row     corresponds to a variable in the main datasets.
 - `activities` <- `activity_labels.txt`. Each row corresponds to one activity: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING and LAYING.
-- `subject_test` <- `test/subject_test.txt` contains test data of 9/30 volunteer test subjects being observed. Available the test folder.
+- `subject_test` <- `test/subject_test.txt`. Test data available the test folder.
 - `x_test` <- `test/X_test.txt` contains recorded features test data. Available the test folder.
 - `y_test` <- `test/y_test.txt` contains test data of activities’code labels. Available the test folder.
-- `subject_train` <- `test/subject_train.txt` contains train data of 21/30 volunteer subjects being observed. Available in the train folder.
+- `subject_train` <- `test/subject_train.txt`. Train data available in the train folder.
 -`x_train` <- `test/X_train.txt` contains recorded features train data. Available in the train folder.
 - `y_train` <- `test/y_train.txt` contains train data of activities’code labels. Available in the train folder.
 
