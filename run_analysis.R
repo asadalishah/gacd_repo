@@ -4,10 +4,6 @@
 
 # Step 1
 
-## download and unzip all files
-getwd()
-setwd("C:/Users/ashah/Documents/Data Science/gacd_repo")
-
 ## checking if archieve already exist
 courseFile <- "gacdassignment.zip" #getting and clearning data assignment
 
@@ -43,7 +39,8 @@ allData <- cbind(subject, x, y)
 
 ## final data
 library(dplyr)
-finalData <- allData %>% select(subject, code, contains("mean"), contains("std"))
+finalData <- allData %>% 
+    select(subject, code, contains("mean"), contains("std"))
 head(finalData)
 
 # Step 3
@@ -53,16 +50,16 @@ finalData$code <- activities[finalData$code, 2]
 # Step 4
 ## Appropriately label the data set with descriptive variable names.
 names(finalData)[2] <- "activity"
+names(finalData)<-gsub("^t", "Time", names(finalData))
+names(finalData)<-gsub("^f", "Frequency", names(finalData))
 names(finalData)<-gsub("Acc", "Accelerometer", names(finalData))
 names(finalData)<-gsub("Gyro", "Gyroscope", names(finalData))
 names(finalData)<-gsub("BodyBody", "Body", names(finalData))
 names(finalData)<-gsub("Mag", "Magnitude", names(finalData))
-names(finalData)<-gsub("^t", "Time", names(finalData))
-names(finalData)<-gsub("^f", "Frequency", names(finalData))
 names(finalData)<-gsub("tBody", "TimeBody", names(finalData))
-names(finalData)<-gsub("-mean()", "Mean", names(finalData), ignore.case = TRUE)
-names(finalData)<-gsub("-std()", "STD", names(finalData), ignore.case = TRUE)
-names(finalData)<-gsub("-freq()", "Frequency", names(finalData), ignore.case = TRUE)
+names(finalData)<-gsub("mean()", "Mean", names(finalData))
+names(finalData)<-gsub("std()", "STD", names(finalData))
+names(finalData)<-gsub("freq()", "Frequency", names(finalData))
 names(finalData)<-gsub("angle", "Angle", names(finalData))
 names(finalData)<-gsub("gravity", "Gravity", names(finalData))
 names(finalData)
@@ -76,5 +73,5 @@ write.table(finalOutput, "finalOutput.txt", row.name=FALSE)
 
 
 ## checking the new dataset by reading it into R
-temp <- read.table("tidy_data.txt", header = T)
+temp <- read.table("finalOutput.txt", header = T)
 View(temp)
