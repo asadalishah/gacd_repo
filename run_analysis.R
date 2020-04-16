@@ -17,7 +17,7 @@ if(!file.exists(courseFile)){
 }
 
 ### checking if folder exists
-if (!file.exists("UCI Dataset")) { 
+if (!file.exists("UCI HAR Dataset")) { 
     unzip(courseFile) 
 }
 
